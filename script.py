@@ -12,6 +12,7 @@
 
 from dataclasses import dataclass
 import os
+import re
 import sys
 
 import cv2
@@ -73,8 +74,14 @@ def prepare_debug_dir(config: Config) -> None:
         os.remove(os.path.join(config.debug_dir, f))
 
 
+def slugify_step_title(title: str) -> str:
+    slug = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
+    return slug
+
+
 def save_debug_step(config: Config, step: int, title: str, img: np.ndarray) -> None:
-    path = os.path.join(config.debug_dir, f"{step:02d} - {title}.png")
+    filename = f"{step:02d}-{slugify_step_title(title)}.png"
+    path = os.path.join(config.debug_dir, filename)
     cv2.imwrite(path, img)
 
     if config.show_images:
