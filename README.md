@@ -54,6 +54,22 @@ python script.py
 
 Open `script.ipynb` in Jupyter or VS Code and run cells sequentially. Each step displays its output image inline before moving to the next.
 
+## Example Walkthrough
+
+The comparison starts with the river region during the dry season, then looks at the same area in the rainy season, and finally highlights the flooded portions detected by the pipeline.
+
+### 1. Dry Season
+
+![Dry season image](images/raw/dry.png)
+
+### 2. Rainy Season
+
+![Rainy season image](images/raw/rainy.png)
+
+### 3. Detected Flooded Areas
+
+![Final flood overlay](images/debug/14%20-%20Flooded%20areas%20overlay.png)
+
 ## Configuration
 
 All tunable parameters are in the `Config` dataclass at the top of `script.py` / `script.ipynb`:
