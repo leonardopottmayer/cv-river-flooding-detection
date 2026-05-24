@@ -68,7 +68,7 @@ The comparison starts with the river region during the dry season, then looks at
 
 ### 3. Detected Flooded Areas
 
-![Final flood overlay](images/debug/14%20-%20Flooded%20areas%20overlay.png)
+![Final flood overlay](<images/debug/14 - Flooded areas overlay.png>)
 
 ## Configuration
 
