@@ -18,7 +18,7 @@ This project detects flooded areas by comparing two grayscale satellite images o
 | 9–10 | Morphological operations | Dilate rainy (fill gaps), erode dry (remove noise) |
 | 11–12 | Binarization | Threshold each image to isolate water pixels |
 | 13 | Flood detection | Subtract dry mask from rainy mask to isolate flooded areas |
-| 14 | Overlay visualization | Color flooded regions in red over the dry-period image |
+| 14 | Overlay visualization | Color flooded regions in blue over the dry-period image |
 
 ## Project Structure
 
@@ -67,5 +67,5 @@ All tunable parameters are in the `Config` dataclass at the top of `script.py` /
 | `erode_iterations` | `5` | Erosion iterations applied to the dry image |
 | `rainy_threshold` | `205` | Binarization threshold for the rainy image |
 | `dry_threshold` | `240` | Binarization threshold for the dry image |
-| `overlay_color` | `(0, 0, 255)` | Flood highlight color in BGR (default: red) |
+| `overlay_color` | `(255, 120, 40)` | Flood highlight color in BGR (default: blue) |
 | `apply_cleanup` | `False` | Apply morphological opening to the flood mask to reduce noise |

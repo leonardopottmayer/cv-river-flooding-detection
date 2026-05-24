@@ -52,7 +52,7 @@ class Config:
     dry_threshold: int = 240
 
     # Overlay color for flooded areas in BGR
-    overlay_color: tuple = (0, 0, 255)
+    overlay_color: tuple = (255, 120, 40)
 
     # Optional light morphological cleanup on the final flood mask to reduce noise
     apply_cleanup: bool = False
@@ -236,7 +236,7 @@ save_debug_step(cfg, 13, "Flooded areas", flooded)
 # ── Step 14: Overlay Visualization ────────────────────────────────────────────
 #
 # The flood mask is overlaid on the equalized dry-period image, coloring the detected
-# flooded regions in red. This gives an immediate visual reading of the flood extent
+# flooded regions in blue. This gives an immediate visual reading of the flood extent
 # against the actual geographic context. The total flooded area in pixels is printed
 # at the end.
 
